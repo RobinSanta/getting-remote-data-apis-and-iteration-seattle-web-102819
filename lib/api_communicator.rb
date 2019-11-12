@@ -7,8 +7,13 @@ def get_character_movies_from_api(character_name)
   response_string = RestClient.get('http://www.swapi.co/api/people/')
   response_hash = JSON.parse(response_string)
 
-  # name = character_name
-  # go into films and pull out all values in an array
+  # RestClient.get()
+  # JSON.parse()
+  # These do work for us we don't really need to understand
+  # Learn about them on your own time but don't think to hard about them at this point
+
+
+  
 
   # iterate over the response hash to find the collection of `films` for the given
   #   `character`
@@ -32,6 +37,7 @@ def print_movies(films)
   puts info.map {|arr| arr["title"]}
   # this puts is so the data we are looking for displays in the terminal
   # without puts the user could not see what data was being searched for
+  # test out runing ruby bin/run.rb without the puts and see what you get
 end
 # binding.pry
 
