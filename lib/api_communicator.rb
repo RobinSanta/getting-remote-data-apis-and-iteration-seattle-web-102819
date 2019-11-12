@@ -24,12 +24,14 @@ def get_character_movies_from_api(character_name)
   character["films"].map {|film| RestClient.get(film)}
 
 end
-binding.pry
+# binding.pry
 
 def print_movies(films)
   # some iteration magic and puts out the movies in a nice list
   info = films.map {|data| JSON.parse(data)}
-  # info.map {|arr| arr["title"]}
+  puts info.map {|arr| arr["title"]}
+  # this puts is so the data we are looking for displays in the terminal
+  # without puts the user could not see what data was being searched for
 end
 # binding.pry
 
